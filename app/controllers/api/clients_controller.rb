@@ -20,9 +20,9 @@ skip_before_action :verify_authenticity_token
 
     def update
       @client = Client.find(params[:id])
-      @client.update(client_params)
-      @client.save
-      binding.pry
+        if @client.update(client_params)
+          render json: @client
+      end
     end
 
 
