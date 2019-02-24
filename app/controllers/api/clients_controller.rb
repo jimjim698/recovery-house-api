@@ -5,7 +5,6 @@ skip_before_action :verify_authenticity_token
   def index
     @clients = Client.all
     render json: @clients
-
   end
 
   def create
@@ -13,8 +12,16 @@ skip_before_action :verify_authenticity_token
     if @client.save
       render json: @client
     end
-
   end
+
+    def edit
+
+    end
+
+    def update
+      binding.pry
+    end
+
 
 
 private
