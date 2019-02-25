@@ -29,6 +29,6 @@ skip_before_action :verify_authenticity_token
 
 private
   def client_params
-    params.require(:client).permit(:name, :age, :job, :chore)
+    params.require(:client).permit(:name, :age, :job, :chore, :password)
   end
 end
