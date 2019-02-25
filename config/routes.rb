@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   end
 
 
+post '/login'=> 'session#screate'
+delete 'logout'=> 'sessions#delete'
+resources :users
+get '/profile'=> 'users#profile'
+
 end
