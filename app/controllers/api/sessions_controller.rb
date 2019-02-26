@@ -1,4 +1,4 @@
-class Api::SessionsController < ApiController
+class Api::SessionsController < Api::ApiController
   skip_before_action :require_login, only [:create], raise: false
 
   def create
