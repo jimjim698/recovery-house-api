@@ -9,7 +9,6 @@ skip_before_action :verify_authenticity_token
   end
 
   def create
-    binding.pry
     @client = Client.new(client_params)
     if @client.save
       render json: @client
