@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
 
-post '/login'=> 'session#screate'
+post 'api/users/login'=> 'api/users#login'
 delete 'logout'=> 'sessions#delete'
 get '/profile'=> 'users#profile'
 

@@ -1,5 +1,6 @@
+require 'pry'
+
 class Api::UsersController < Api::ApiController
-protect_from_forgery with: :null_session
   skip_before_action :verify_authenticity_token
 
   def create
@@ -8,6 +9,7 @@ protect_from_forgery with: :null_session
   end
 
   def login
+    binding.pry
     @user = User.find_by(username: params[:username])
 
     return render json: @user if(@user.password == params[:password])

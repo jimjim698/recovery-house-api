@@ -1,7 +1,8 @@
 require 'pry'
 
 class Api::ClientsController < ApplicationController
-#skip_before_action :verify_authenticity_token
+
+skip_before_action :verify_authenticity_token
   def index
     @clients = Client.all
     render json: @clients
