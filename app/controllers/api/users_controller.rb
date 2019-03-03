@@ -9,12 +9,15 @@ class Api::UsersController < Api::ApiController
   end
 
   def login
-    binding.pry
-    @user = User.find_by(username: params[:username])
 
-    return render json: @user if(@user.password == params[:password])
+    @user = User.find_by(username: params[:user][:username])
+    if @user && @user.authenticate(params[:user][:password])
+      @test="test"
+      binding.pry
+    render json: @user
 
     render json: { status: 400 }
+  end
   end
 
 
