@@ -26,6 +26,12 @@ skip_before_action :verify_authenticity_token
       end
     end
 
+    def destroy
+      @client = Client.find_by_id(params[:id])
+      @client.destroy
+      render json: @client
+    end
+
 
 
 private
