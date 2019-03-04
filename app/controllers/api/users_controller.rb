@@ -13,8 +13,6 @@ class Api::UsersController < Api::ApiController
     @user = User.find_by(username: params[:user][:username])
     if @user && @user.authenticate(params[:user][:password])
     render json: @user
-    else
-    render json: {error: "Login Failed"}, status: 400 
     end
   end
 
