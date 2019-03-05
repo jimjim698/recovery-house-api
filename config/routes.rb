@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :clients
     resources :users
     resources :api
+    resources :annoucements
 
 
  # Get login token from Knock
