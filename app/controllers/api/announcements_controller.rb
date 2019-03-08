@@ -13,6 +13,12 @@ class Api::AnnouncementsController < ApplicationController
       @announcement= get_current_user.announcements.build(announcement_params)
       @announcement.save
       render json: @announcement
+  end
+
+  def update
+    @announcement = Announcement.find_by_id(params[:id])
+    @announcement.update(announcement_params)
+    binding.pry
 
   end
 
