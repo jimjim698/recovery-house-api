@@ -19,7 +19,12 @@ class Api::AnnouncementsController < ApplicationController
     @announcement = Announcement.find_by_id(params[:id])
     @announcement.update(announcement_params)
     render json: @announcement
+  end
 
+  def destroy
+    @announcement= Announcement.find_by_id(params[:id])
+    @announcement.destroy
+    render json: @announcement
   end
 
 
