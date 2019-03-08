@@ -18,7 +18,7 @@ class Api::AnnouncementsController < ApplicationController
   def update
     @announcement = Announcement.find_by_id(params[:id])
     @announcement.update(announcement_params)
-    binding.pry
+    render json: @announcement
 
   end
 
