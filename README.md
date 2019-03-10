@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Recovery House is a simple environment for Half Way House residents to check current chores and keep updated on house announcements.
 
-Things you may want to cover:
+##Steps to set-up
 
-* Ruby version
+##Run These Commands
 
-* System dependencies
+git clone: git@github.com:jimjim698/recovery-house-api.git
 
-* Configuration
+bundle install
 
-* Database creation
+rake db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The frotend in located here: git@github.com:jimjim698/recovery-house.git
